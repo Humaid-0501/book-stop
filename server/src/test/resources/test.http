@@ -1,0 +1,56 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+#GET http://localhost:8080/HumaidBookstoreOrder/api/categories
+#Accept: application/json
+
+POST http://localhost:8080/HumaidBookstoreOrder/api/orders
+Accept: */*
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Connection: keep-alive
+Origin: http://localhost:8081
+Referer: http://localhost:8081/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-site
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+sec-ch-ua: "Google Chrome";v="107", "Chromium";v="107", "Not=A?Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Content-Type: application/json
+
+{
+  "cart": {
+    "itemArray": [
+      {
+        "book": {
+          "bookId": 1001,
+          "title": "Atomic Habits",
+          "author": "James Clear",
+          "description": "The #1 New York Times bestseller. Over 4 million copies sold\u0021 Tiny Changes, Remarkable Results",
+          "price": 1299,
+          "rating": 5,
+          "isPublic": true,
+          "isFeatured": true,
+          "categoryId": 1001
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Humaid Ahmed Desai",
+    "address": "1211 University Ter Apt L",
+    "phone": "(703) 555-1212",
+    "email": "pop@test.com",
+    "ccNumber": "4444 3333 2222 1111",
+    "ccExpiryMonth": 11,
+    "ccExpiryYear": 2022
+  }
+}
